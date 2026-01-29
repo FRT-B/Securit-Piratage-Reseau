@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" >
+    <title>Le Concept - Attaque MitM</title>
+    <meta name="description" content="Explication détaillée de l'attaque Man in the Middle" >
+    <meta name="author" content="Parthipan Pirabakaran et RATSIMBASON Fanantenana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" >
+    <link rel="icon" href="images/favicon.png" >
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="logo" class = "img-petit" >
+        <h1>Mécanisme de l'Attaque</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="concept.html"><strong class="jaune">Le Concept</strong></a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="etude.html">Étude de Cas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="special">Définition de l'attaque</h2>
+            
+            <article>
+                <h3>Le principe fondamental</h3>
+                <p>L'attaque de l'Homme du Milieu (ou <span class="bleu">Man-in-the-Middle</span>) est une technique d'interception de données redoutable.</p>
+                <p class="important">L'objectif du pirate est de se placer physiquement ou logiquement entre deux victimes qui pensent communiquer directement entre elles.</p>
+                <p>Au lieu de voyager directement entre votre navigateur et le serveur web, les données transitent par l'ordinateur de l'attaquant qui peut les lire, les enregistrer ou même les modifier en temps réel.</p>
+
+                <figure>
+                    <img src="images/schema_attaque.png" alt="Schéma technique de l'interception MitM" class = "img-grand" >
+                    <figcaption>Architecture d'une interception MitM sur un réseau local</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="special">Déroulement technique</h2>
+            
+            <article>
+                <h3>Le processus en 3 étapes</h3>
+                <p>Pour réussir cette attaque, le pirate suit généralement un protocole précis :</p>
+                <ul>
+                    <li><strong>Étape 1 : L'interception.</strong> Le pirate crée un faux point d'accès Wi-Fi (Hotspot) ou utilise une technique appelée "ARP Spoofing" pour détourner le trafic du réseau vers lui.</li>
+                    <li><strong>Étape 2 : Le relais.</strong> La victime se connecte au pirate sans le savoir. Le pirate transfère ensuite les requêtes au véritable site web pour que la navigation semble normale.</li>
+                    <li><strong>Étape 3 : Le déchiffrement.</strong> Si le site n'est pas sécurisé, le pirate lit toutes les informations qui circulent en clair.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Pourquoi est-ce dangereux ?</h3>
+                <p>Le danger principal vient de l'invisibilité de l'attaque. L'utilisateur ne voit aucune différence : le site s'affiche correctement, mais chaque frappe au clavier est enregistrée.</p>
+                <p>Voici une liste non exhaustive des <strong class="important">données critiques</strong> récupérées lors d'une attaque MitM :</p>
+                <ul>
+                    <li>Identifiants de connexion et mots de passe.</li>
+                    <li>Coordonnées bancaires et numéros de cartes.</li>
+                    <li>Contenu des emails et messages privés.</li>
+                    <li><em>Cookies de session</em> (permettant de voler l'accès à vos comptes sans mot de passe).</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer id="bas-de-page">
+        <div class="footer-content">
+            <small><strong>CY Cergy Paris Université</strong> - TD3 Développement Web</small>
+            <div class="authors">Parthipan P. — Fanantenana R.</div>
+            <small>&copy; 2026 - Tous droits réservés - Projet CY Cergy Paris Université</small>
+        </div>
+    </footer>
+
+</body>
+</html>

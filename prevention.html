@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" >
+    <title>Prévention - Se protéger</title>
+    <meta name="author" content="Parthipan Pirabakaran et RATSIMBASON Fanantenana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conseils et bonnes pratiques pour éviter le piratage MitM" >
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="style.css" >
+    <link rel="icon" href="images/favicon.png" > </head>
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="logo" class = "img-petit" >
+        <h1>Comment se protéger ?</h1>
+        <nav>
+            <ul>
+                <li><a href = "index.html"> Accueil </a></li>
+                <li><a href="concept.html">Le Concept</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="prevention.html"><strong class="jaune">Prévention </strong> </a></li>
+                <li><a href="etude.html">etude</a>li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="special">Le protocole de sécurité : HTTP vs HTTPS</h2>
+            <p>La première défense contre l'attaque de l'Homme du Milieu est le chiffrement des données.</p>
+            <p class="important">Il est vital de vérifier la présence du cadenas dans la barre d'adresse de votre navigateur avant de saisir des informations sensibles.</p>
+
+            <figure>
+                <img src="images/prevention.png" alt="Comparaison HTTP vs HTTPS" width="500" >
+                <figcaption>Visualisation du chiffrement TLS entre un client et un serveur</figcaption>
+            </figure>
+
+            <table > <caption>Comparatif technique des protocoles</caption>
+                <thead>
+                    <tr>
+                        <th>Protocole</th>
+                        <th>Sécurité</th>
+                        <th>Risque MitM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTTP</td>
+                        <td>Aucune (<span class="important">Texte clair</span>)</td>
+                        <td class="important">CRITIQUE</td>
+                    </tr>
+                    <tr>
+                        <td>HTTPS</td>
+                        <td>Chiffré (<span class="bleu">TLS/SSL</span>)</td>
+                        <td>FAIBLE</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <h2 class="special">Les bonnes pratiques au quotidien</h2>
+            <article>
+                <h3>Règles d'hygiène numérique</h3>
+                <p>Pour naviguer en toute sécurité, voici les réflexes à adopter :</p>
+                <ul>
+                    <li><strong>Privilégier la 4G/5G :</strong> Évitez les réseaux Wi-Fi publics ouverts (gares, aéroports) qui sont les cibles favorites des pirates.</li>
+                    <li><strong>Utiliser un VPN :</strong> Un <span class="bleu">Virtual Private Network</span> crée un tunnel chiffré pour vos données, rendant le sniffing impossible.</li>
+                    <li><strong>Double Authentification (2FA) :</strong> Même si un pirate vole votre mot de passe, il ne pourra pas accéder à votre compte sans le code reçu sur votre téléphone.</li>
+                    <li><strong>Mises à jour :</strong> Gardez votre système et votre navigateur à jour pour corriger les failles de sécurité exploitées par les hackers.</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+
+    <footer id="bas-de-page">
+        <div class="footer-content">
+            <small><strong>CY Cergy Paris Université</strong> - TD3 Développement Web</small>
+            <div class="authors">Parthipan P. — Fanantenana R.</div>
+            <small>&copy; 2026 - Tous droits réservés - Projet CY Cergy Paris Université</small>
+        </div>
+    </footer>
+
+</body>
+</html>

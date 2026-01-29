@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" >
+    <meta name="author" content="Parthipan Pirabakaran et RATSIMBASON Fanantenana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Les outils et méthodes du pirate informatique" >
+    <title>Techniques - Attaque MitM</title>
+
+    <link rel="stylesheet" href="style.css" > <link rel="icon" href="images/favicon.png" >
+</head>
+<body>
+
+    <header>
+        <img src="images/logo.png" alt="logo" class = "img-petit">
+        <h1>Les Techniques de Piratage</h1>
+        <nav>
+            <ul>
+                <li><a href = "index.html">Accueil </a></li>
+                <li><a href="concept.html">Le Concept</a></li>
+                <li><a href="techniques.html"><strong class="jaune">Techniques</strong></a></li>
+                <li><a href="prevention.html">Prévention</a></li>
+                <li><a href="etude.html">etude</a>li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2 class="special">L'équipement du pirate</h2>
+            <article>
+                <p>Pour mener à bien une attaque de l'Homme du Milieu, le pirate n'a pas besoin de matériel complexe. Un simple ordinateur avec une carte Wi-Fi performante suffit.</p>
+                <p class="important">Certains pirates utilisent des outils dédiés comme le Pineapple Wi-Fi, un boîtier conçu pour intercepter le trafic sans fil automatiquement.</p>
+                
+                <figure>
+                    <img src="images/wifi_hacker.png" alt="Boîtier Pineapple Wi-Fi" class = "img-petit" >
+                    <figcaption>Le Pineapple Wi-Fi : un outil redoutable pour le piratage de proximité</figcaption>
+                </figure>
+            </article>
+        </section>
+
+        <section>
+            <h2 class="special">Les 3 méthodes principales</h2>
+            
+            <article>
+                <h3>1. Le Jumeau Maléfique (Evil Twin)</h3>
+                <p>Le pirate crée un point d'accès Wi-Fi portant exactement le même nom qu'un réseau légitime (ex: <span class="important">"Gare_Gratuit"</span> ou <span class="important">"Hotel_Guest"</span>).</p>
+                <p>Le smartphone de la victime, configuré pour se reconnecter automatiquement, choisit souvent le signal le plus puissant, qui est celui du pirate situé à quelques mètres.</p>
+            </article>
+
+            <article>
+                <h3>2. Le Vol de Session (Session Hijacking)</h3>
+                <p>Lorsqu'un utilisateur se connecte à un site, un "cookie" de session est créé pour maintenir sa connexion active.</p>
+                <p>Si le réseau n'est pas chiffré, le pirate peut voler ce cookie. Cela lui permet d'usurper l'identité de la victime sur des sites comme Facebook ou Amazon sans jamais avoir à saisir de mot de passe.</p>
+            </article>
+
+            <article>
+                <h3>3. Le Sniffing et l'analyse de paquets</h3>
+                <p>Le pirate utilise des logiciels d'analyse réseau (comme <span class="bleu">Wireshark</span>) pour capturer tous les paquets de données qui transitent dans l'air.</p>
+                <p>Si la communication utilise le protocole HTTP, toutes les informations (identifiants, messages, coordonnées bancaires) apparaissent en <strong class="important">texte clair</strong> sur l'écran du pirate.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer id="bas-de-page">
+        <div class="footer-content">
+            <small><strong>CY Cergy Paris Université</strong> - TD3 Développement Web</small>
+            <div class="authors">Parthipan P. — Fanantenana R.</div>
+            <small>&copy; 2026 - Tous droits réservés - Projet CY Cergy Paris Université</small>
+        </div>
+    </footer>
+</body>
+</html>

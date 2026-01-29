@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" >
+    <meta name="author" content="Parthipan Pirabakaran et RATSIMBASON Fanantenana">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez les outils du hacker : du Wi-Fi Pineapple au sniffing avec Wireshark. Analyse des méthodes d'attaque Man-in-the-Middle et vol de sessions.">
+    <title>Étude de Cas - Simulation d'Attaque MitM</title>
+
+    <link rel="stylesheet" href="style.css" > <link rel="icon" href="images/favicon.png" >
+</head>
+<body>
+<header>
+    <img src="images/logo.png" alt="logo" class ="img-petit">
+    <h1>Sécurité & Piratage Réseau</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="concept.html">Le Concept</a></li>
+            <li><a href="techniques.html">Techniques</a></li>
+            <li><a href="prevention.html">Prévention</a></li>
+            <li><a href="etude.html"><strong class="jaune">Étude de Cas </strong></a></li> </ul>
+    </nav>
+</header>
+<main>
+    <section>
+        <h2 class = "special"> Etude de Cas : Interception au CyberCafé</h2>
+        <article>
+            <p> Pour mieux comprendre la dangerosité d'une attaque <strong>Man-in-the-Middle</strong>, nous avons imaginé un scénario réaliste mettant en scène un utilisateur lambda et un pirate dans un lieu public.</p>
+
+        </article>
+    </section>
+    <section>
+        <h3>Le Scénario : L'erreur </h3>
+        <article>
+            <p><strong>La Victime :</strong> Alex, étudiant, se rend dans un café pour réviser. Il cherche une connexion Wi-Fi pour accéder à ses cours en ligne.</p>
+            <p><strong>Le Pirate :</strong> Assis à deux tables de là, le pirate utilise son ordinateur pour diffuser un réseau Wi-Fi gratuit nommé <span class="important">"Wi-Fi_Gratuit_Cafe"</span>.</p>
+            <p>Alex voit ce réseau ouvert, s'y connecte sans réfléchir. À cet instant précis, Alex ne communique plus avec internet, mais directement avec l'ordinateur du pirate.</p>
+        </article>
+    </section>
+    <section>
+        <h3>Simulation : Ce que voit le pirate</h3>
+        <p>Voici un aperçu simplifié de ce qui s'affiche sur le terminal du pirate lorsque Alex tente de se connecter à son compte étudiant (non sécurisé) : </p>
+        <pre style="background-color: #222; color: #0f0; padding: 20px; border-radius: 5px; font-family: 'Courier New', monospace;">
+            [SYSTEM] : Nouveau client connecté : IP 192.168.1.12
+            [TRAFFIC] : Capture des paquets en cours...
+            [ALERT] : Requête HTTP détectée vers http://portail-etudiant.fr/login
+            [DATA FOUND] :
+                - Champ 'Identifiant' : Alex.cergy95
+                - Champ 'Mot_de_passe' : MaMaman95!
+            [SYSTEM] : Données enregistrées dans logs.txt
+        </pre>
+        <p>Ainsi en quelques secondes le pirate arrive à récupérer les accès d'Alex sans qu'il s’en aperçoive </p>
+        <section>
+            <h3>Analyse du flux d'interception</h3>
+            <p>Ici le pirate a réussi car il a forcé les données à passer par son "tunnel" avant de les renvoyer vers le vrai site.</p>
+
+        </section>
+    </section>
+</main>
+<footer id="bas-de-page">
+    <div class="footer-content">
+        <small><strong>CY Cergy Paris Université</strong> - TD3 Développement Web</small>
+        <div class="authors">Parthipan P. — Fanantenana R.</div>
+        <small>&copy; 2026 - Tous droits réservés - Projet CY Cergy Paris Université</small>
+    </div>
+</footer>
+</body>
+</html>
